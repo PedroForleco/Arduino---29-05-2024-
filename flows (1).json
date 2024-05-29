@@ -1,0 +1,146 @@
+[
+    {
+        "id": "d84d04950b2113a6",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dfd780f9a0420393",
+        "type": "arduino in",
+        "z": "d84d04950b2113a6",
+        "name": "",
+        "pin": "0",
+        "state": "ANALOG",
+        "arduino": "dfb9fe58b92dd7d7",
+        "x": 270,
+        "y": 300,
+        "wires": [
+            [
+                "5927346c25dd14c8"
+            ]
+        ]
+    },
+    {
+        "id": "db0508bdcba4b6a5",
+        "type": "arduino out",
+        "z": "d84d04950b2113a6",
+        "name": "LED",
+        "pin": "13",
+        "state": "OUTPUT",
+        "arduino": "dfb9fe58b92dd7d7",
+        "x": 590,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5927346c25dd14c8",
+        "type": "ui_gauge",
+        "z": "d84d04950b2113a6",
+        "name": "",
+        "group": "f80e19621ced1678",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "LDR",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1023",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 450,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "5533427e50afb8eb",
+        "type": "ui_button",
+        "z": "d84d04950b2113a6",
+        "name": "",
+        "group": "f80e19621ced1678",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "LED ON",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 260,
+        "y": 160,
+        "wires": [
+            [
+                "db0508bdcba4b6a5"
+            ]
+        ]
+    },
+    {
+        "id": "bac1d8e1a7601f5a",
+        "type": "ui_button",
+        "z": "d84d04950b2113a6",
+        "name": "",
+        "group": "f80e19621ced1678",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "LED OFF",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 260,
+        "y": 200,
+        "wires": [
+            [
+                "db0508bdcba4b6a5"
+            ]
+        ]
+    },
+    {
+        "id": "dfb9fe58b92dd7d7",
+        "type": "arduino-board",
+        "device": "COM6"
+    },
+    {
+        "id": "f80e19621ced1678",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "6927984b27b4e49e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6927984b27b4e49e",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
